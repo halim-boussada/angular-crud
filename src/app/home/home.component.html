@@ -1,0 +1,7 @@
+<div style="min-height: 80vh; background-color: rgb(158, 158, 158);">
+    <input type="text" (keyup)="setInputvalue($event)">
+    <button (click)="add()">add</button>
+    <div *ngFor="let e of todoList">
+         <li>{{ e.todo }} <button (click)="del(e._id)">delete</button><button (click)="update(e._id)">update</button></li> 
+    </div>
+</div>
